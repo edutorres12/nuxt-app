@@ -1,9 +1,7 @@
 <template>
-
-  <div class="container">
-	<Hero />
+    <div class="container">
 	<LargeCardDisplay 
-		v-for="cardInfo in LargeCardInfo"
+		v-for="cardInfo in LargeCardInfo.slice(0,1)"
 		:key="cardInfo.id"
 		:cardsSection="cardInfo"
 		/>
@@ -11,9 +9,7 @@
     v-for="smallCard in SmallCardInfo" 
     :key="smallCard.id"
     :smallCardSection="smallCard"
-  />
-
-  </div>
+  />    </div>
 </template>
 
 <script>
@@ -28,7 +24,6 @@ export default {
 }
 </script>
 
-
-<style>
+<style lang="sass" scoped>
 
 </style>
